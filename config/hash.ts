@@ -10,13 +10,13 @@ const hashConfig = defineConfig({
   /**
    * Default hasher used by the application.
    */
-  default: 'scrypt',
+  default: 'bcrypt',
 
   list: {
     /**
      * Scrypt is memory-hard, which makes brute-force attacks more expensive.
      */
-    scrypt: drivers.scrypt({
+    bcrypt: drivers.bcrypt({
       /**
        * Work factor (Node alias: N / cost).
        * Higher values increase security and CPU+memory usage.
